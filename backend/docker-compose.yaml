@@ -1,0 +1,14 @@
+# To build/rebuild and start, go to /backend and:
+# npm run build:backend:onconnect && docker-compose up --build
+#
+# Then query the lambda:
+# curl -XPOST "http://localhost:3000/2015-03-31/functions/function/invocations" -d '{"requestContext":{"connectionId": "7"}}'
+services:
+  dynamodb:
+    image: amazon/dynamodb-local
+    ports:
+      - '8000:8000'
+  onconnect:
+    build: onconnect
+    ports:
+      - '3000:8080'
