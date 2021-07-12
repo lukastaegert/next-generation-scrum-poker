@@ -1,37 +1,6 @@
 import { VOTE_COFFEE, VOTE_NOTE_VOTED, VOTE_OBSERVER } from '../constants';
 
-export type CardValue =
-  | typeof VOTE_OBSERVER
-  | typeof VOTE_NOTE_VOTED
-  | typeof VOTE_COFFEE
-  | '?'
-  | '∞'
-  | 'XS'
-  | 'S'
-  | 'M'
-  | 'L'
-  | 'XL'
-  | 'XXL'
-  | '0'
-  | '0.5'
-  | '1'
-  | '2'
-  | '3'
-  | '4'
-  | '5'
-  | '8'
-  | '13'
-  | '16'
-  | '20'
-  | '21'
-  | '32'
-  | '34'
-  | '40'
-  | '55'
-  | '64'
-  | '89'
-  | '100'
-  | '128';
+export type CardValue = string;
 
 export interface Votes {
   [userId: string]: CardValue;
